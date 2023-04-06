@@ -2,6 +2,7 @@ fx_version 'adamant'
 game 'gta5'
 lua54 'yes'
 
+Creator 'Shredder#9064'
 description 'Shredder Development: Kupovina dozvola'
 
 client_scripts {
@@ -13,7 +14,5 @@ server_scripts {
 }
 
 shared_scripts {
-    '@es_extended/imports.lua',
     '@ox_lib/init.lua'
 }
-
