@@ -1,6 +1,6 @@
 RegisterServerEvent('platiDozvolu')
 AddEventHandler('platiDozvolu', function()
-	local xPlayer = ESX.GetPlayerFromId(source)
+    local xPlayer = ESX.GetPlayerFromId(source)
     local proveriStanje = xPlayer.getAccount('money').money
     local mozdaIma = xPlayer.getInventoryItem('oruzije')
     if proveriStanje < 20000 then 
@@ -11,7 +11,8 @@ AddEventHandler('platiDozvolu', function()
   	    xPlayer.showNotification("Vec imas dozvolu za oruzije")
   	    return
   	end
-  	TriggerClientEvent('okokNotify:Alert', source, "NEO", "Kupili ste dozvolu za oruzije!", 5000, 'success')
+  	--TriggerClientEvent('okokNotify:Alert', source, "NEO", "Kupili ste dozvolu za oruzije!", 5000, 'success')
+	xPlayer.showNotification("Kupili ste dozvolu za oruzije!")
 
   	--daje vama
 	TriggerEvent('esx_license:addLicense', source, 'weapon')
@@ -19,4 +20,3 @@ AddEventHandler('platiDozvolu', function()
 	xPlayer.removeMoney(20000)
   end
 end)
-
