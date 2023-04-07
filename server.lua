@@ -11,10 +11,8 @@ AddEventHandler('platiDozvolu', function()
   	    xPlayer.showNotification("Vec imas dozvolu za oruzije")
   	    return
   	end
-  	--TriggerClientEvent('okokNotify:Alert', source, "NEO", "Kupili ste dozvolu za oruzije!", 5000, 'success')
 	xPlayer.showNotification("Kupili ste dozvolu za oruzije!")
-
-  	--daje vama
+	-- daje vama
 	TriggerEvent('esx_license:addLicense', source, 'weapon')
 	xPlayer.addInventoryItem('oruzije', 1)
 	xPlayer.removeInventoryItem("money", 20000)
