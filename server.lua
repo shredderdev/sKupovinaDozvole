@@ -17,6 +17,6 @@ AddEventHandler('platiDozvolu', function()
   	--daje vama
 	TriggerEvent('esx_license:addLicense', source, 'weapon')
 	xPlayer.addInventoryItem('oruzije', 1)
-	xPlayer.removeMoney(20000)
+	xPlayer.removeInventoryItem("money", 20000)
   end
 end)
